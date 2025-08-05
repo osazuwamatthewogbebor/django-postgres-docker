@@ -6,7 +6,7 @@ WORKDIR /app
 
 # Install system dependencies for psycopg2
 RUN apt-get update \
-    && apt-get install -y gcc libpq-dev \
+    && apt-get install -y gcc libpq-dev postgresql-client \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy the requirements file into the container at /app
